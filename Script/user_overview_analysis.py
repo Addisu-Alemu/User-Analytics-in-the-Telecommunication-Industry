@@ -46,8 +46,6 @@ def preprocess_data(df):
     return df_filtered_cleaned
 
 
-
-
 def analyze_handsets(data_file_path):
     # Load the cleaned data from the CSV file
     df_cleaned = pd.read_csv(data_file_path)
@@ -133,4 +131,5 @@ def fix_outliers(df: pd.DataFrame):
         df[col] = np.where(df[col] < lower, lower, df[col])
 
     return df
+
 
